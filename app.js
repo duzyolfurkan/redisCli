@@ -53,4 +53,12 @@ client.append("last_name", "TEST", (error, message) => {
         };
         console.log("Appent Get Message: ", msg);
     });
-})
+});
+
+//Message client test area
+client.on("message", (channel, message) => {
+    console.log(`${channel} isimli kanala ${message} mesajı geldi`)
+});
+
+//Susbscribe area
+client.subscribe('testkanali');
