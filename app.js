@@ -6,3 +6,12 @@ const client = redis.createClient();
 client.on("error", (error) => {
     console.error(error);
 });
+
+//Set methods creating
+client.set("user_name", "gokhan", (error, message) => {
+    if(error){
+        console.log(error);
+    };
+
+    console.log("Message", message);
+});

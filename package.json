@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "redis": "^4.6.8"
+    "redis": "^3.0.0"
   }
 }
