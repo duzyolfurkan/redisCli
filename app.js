@@ -38,3 +38,19 @@ client.exists("user_name", (error, message) => {
     };
     console.log("Exists Message: ", message);
 });
+
+//Append methods creating
+client.append("last_name", "TEST", (error, message) => {
+    if(error){
+        console.log(error);
+    };
+    console.log("Append Message:", message);
+
+    //Append visualization test
+    client.get("last_name", (err, msg) => {
+        if(err){
+            console.log(err);
+        };
+        console.log("Appent Get Message: ", msg);
+    });
+})
