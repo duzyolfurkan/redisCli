@@ -12,7 +12,6 @@ client.set("user_name", "TEST", (error, message) => {
     if(error){
         console.log(error);
     };
-
     console.log("Set Message: ", message);
 });
 
@@ -21,8 +20,15 @@ client.get("user_name", (error,message) => {
     if(error){
         console.log(error);
     };
-
     console.log("Get Message: ", message);
+});
+
+//Delete methods creating
+client.del("user_name", (error, message) => {
+    if(error){
+        console.log(error);
+    };
+    console.log("Delete Message: ", message);
 });
 
 //Exists methods creating
